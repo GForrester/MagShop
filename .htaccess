@@ -1,0 +1,10 @@
+RewriteEngine On
+RewriteBase /magshop/
+
+# RewriteRule ^magshop/admin/$ magshop/ [NC,L]
+RewriteRule ^category/([0-9A-z\s_-]+)/?$ ?category=$1 [NC,L] #category by name
+RewriteRule ^product/([0-9A-z\s_-]+)/?$ ?product=$1 [NC,L] #product by name
+# RewriteRule ^category/([0-9A-z\s_-]+)/?$ ?category=$1 [NC,L] #category by name
+# RewriteRule ^product/([0-9A-z\s_-]+)/?$ ?product=$1 [NC,L] #product by name
+RewriteRule ^([0-9A-z\s_-]+)/?$ ?prod_or_cat=$1 [NC,L] #product or catergory by name
+RewriteRule ^controller/([a-z]+)/?$ ?controller=$1 [NC,L]
